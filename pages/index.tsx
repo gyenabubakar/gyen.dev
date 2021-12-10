@@ -9,6 +9,8 @@ const Home: NextPage = () => {
 				<title>Gyen Abubakar - Front-end Developer</title>
 				<link rel="icon" type="image/png" href="/favicon.png" />
 			</Head>
+
+			<header></header>
 		</div>
 	);
 };
