@@ -7,7 +7,7 @@ const Home: NextPage = () => {
 		<div>
 			<Head>
 				<title>Gyen Abubakar - Front-end Developer</title>
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" type="image/png" href="/favicon.png" />
 			</Head>
 		</div>
 	);
