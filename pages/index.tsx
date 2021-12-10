@@ -10,7 +10,16 @@ const Home: NextPage = () => {
 				<link rel="icon" type="image/png" href="/favicon.png" />
 			</Head>
 
-			<header></header>
+			<header>
+				<div className="container">
+					<div className="flex-end">
+						<a href="https://blog.gyen.dev" className="checkout-btn font-md">
+							<span className="color-2">~$</span>&nbsp;
+							<span className="color-1">git checkout blog</span>
+						</a>
+					</div>
+				</div>
+			</header>
 		</div>
 	);
 };
