@@ -50,6 +50,8 @@ const Home: NextPage = () => {
 					</div>
 				</div>
 			</main>
+
+			<img src="/blob.svg" alt="blob" className="blob" />
 		</div>
 	);
 };

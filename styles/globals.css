@@ -5,6 +5,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: Fira Mono, consolas, sans-serif;
+	position: relative;
 }
 
 * {
@@ -130,6 +131,14 @@ a {
 	width: 85%;
 }
 
+.blob {
+	display: none;
+	position: fixed;
+	width: 355px;
+	top: 70%;
+	left: -180px;
+}
+
 @media screen and (min-width: 576px) {
 	.container {
 		width: 540px;
@@ -160,9 +169,24 @@ a {
 		width: 960px;
 	}
 
+	.text-content {
+		margin-top: 1rem;
+	}
+
 	.row {
 		flex-direction: row;
 		justify-content: space-between;
+		margin-top: 2rem;
+	}
+	.blob {
+		display: block;
+	}
+	.text-content {
+		width: 70%;
+	}
+
+	.img-illustration {
+		justify-content: flex-end;
 	}
 
 	.img-illustration img {
