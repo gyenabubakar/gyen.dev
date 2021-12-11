@@ -36,20 +36,33 @@ a {
 	color: #8f8fdb;
 }
 
+.bg-black {
+	background-color: #000;
+	color: #fff;
+}
+
 .container {
 	width: 100%;
 	padding: 0 10px;
 	margin: 0 auto;
 }
 
-.flex-end {
+.flex-between {
 	display: flex;
-	justify-content: end;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.btn {
+	display: inline-block;
+	padding: 15px 0;
+}
+
+.btn.github img {
+	width: 40px;
 }
 
 .checkout-btn {
-	display: inline-block;
-	padding: 15px 0;
 	position: relative;
 	transition: all 3s linear;
 	overflow: hidden;
@@ -84,6 +97,39 @@ a {
 	}
 }
 
+.row {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 5rem;
+}
+
+.text-content h1,
+.text-content h3 {
+	margin: 0;
+	text-align: center;
+}
+
+.text-content h1 {
+	font-size: 44px;
+	line-height: 50px;
+}
+
+.text-content h3 {
+	font-size: 26px;
+	margin-top: 2rem;
+}
+
+.img-illustration {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.img-illustration img {
+	width: 85%;
+}
+
 @media screen and (min-width: 576px) {
 	.container {
 		width: 540px;
@@ -95,17 +141,56 @@ a {
 	.container {
 		width: 720px;
 	}
+
+	.img-illustration img {
+		width: 75%;
+	}
+
+	.text-content h1 {
+		font-size: 44px;
+	}
+
+	.text-content h3 {
+		font-size: 26px;
+	}
 }
 
 @media screen and (min-width: 992px) {
 	.container {
-		width: 720px;
+		width: 960px;
+	}
+
+	.row {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.img-illustration img {
+		width: 65%;
+	}
+
+	.text-content h1 {
+		font-size: 64px;
+		line-height: 60px;
+	}
+
+	.text-content h3 {
+		font-size: 36px;
+	}
+	.text-content h1,
+	.text-content h3 {
+		text-align: left;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	.container {
 		width: 1140px;
+	}
+
+	.text-content h1 {
+		font-size: 64px;
+		line-height: 70px;
 	}
 }
 
