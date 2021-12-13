@@ -176,8 +176,9 @@ a {
 	.row {
 		flex-direction: row;
 		justify-content: space-between;
-		margin-top: 2rem;
+		margin-top: 15vh;
 	}
+
 	.blob {
 		display: block;
 	}
@@ -195,7 +196,7 @@ a {
 
 	.text-content h1 {
 		font-size: 64px;
-		line-height: 60px;
+		line-height: 70px;
 	}
 
 	.text-content h3 {
