@@ -22,7 +22,7 @@ const Home: NextPage = () => {
 						</a>
 
 						<a
-							href="https://blog.gyen.dev"
+							href="https://codewith.gyen.dev"
 							className="btn checkout-btn font-md"
 						>
 							<span className="color-2">~$</span>&nbsp;
