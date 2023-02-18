@@ -15,14 +15,14 @@ const Home: NextPage = () => {
 				<div className="container">
 					<div className="flex-between">
 						<a
-							href="https://github.com/gyenabubakar/portfolio"
+							href="https://github.com/gyenabubakar/gyen.dev"
 							className="btn github font-md"
 						>
 							<img src="/github.svg" alt="github" />
 						</a>
 
 						<a
-							href="https://codewith.gyen.dev"
+							href="https://blog.gyen.dev"
 							className="btn checkout-btn font-md"
 						>
 							<span className="color-2">~$</span>&nbsp;
