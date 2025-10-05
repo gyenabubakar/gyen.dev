@@ -1,7 +1,7 @@
 [
   {
     "company": "Atlantic Meridian EV",
-    "startDate": "Jul 2025",
+    "startDate": "Jul 2024",
     "endDate": null,
     "role": "Lead Software Engineer",
     "description": "Building EV charging infrastructure and smart hardware solutions for Africa's clean energy transition. Developing platforms for charging station management, vehicle sales, and service operations.",
@@ -12,15 +12,15 @@
     "startDate": "Jul 2024",
     "endDate": null,
     "role": "Lead Frontend Developer",
-    "description": "Software agency building solutions for multiple clients including forecourt automation systems and therapy consultation management platforms. Architected reusable frontend frameworks and component libraries used across PlugDrive and other client projects.",
+    "description": "Software agency building solutions for multiple clients including forecourt automation and therapy consultation platforms. Architected reusable frontend frameworks and component libraries used across client projects.",
     "logo": "sourcertz.png"
   },
   {
     "company": "PlugDrive.app",
     "startDate": "Nov 2024",
-    "endDate": null,
+    "endDate": "Aug 2025",
     "role": "Lead Frontend Developer",
-    "description": "Led frontend engineering teams building EV charging station management platform serving multiple charging providers. Delivered admin dashboards, customer portals, and real-time monitoring systems.",
+    "description": "Led frontend engineering teams building EV charging station management platform serving multiple providers. Delivered admin dashboards, customer portals, and real-time monitoring systems.",
     "logo": "plugdrive.png"
   },
   {
@@ -28,7 +28,7 @@
     "startDate": "May 2023",
     "endDate": "Jul 2024",
     "role": "Full-stack Developer",
-    "description": "Built e-commerce workflow automation platform integrating payment processing, shipping logistics, and inventory management. Created custom CMS enabling merchants to manage storefronts, products, and content.",
+    "description": "Built e-commerce workflow automation platform integrating payment processing, shipping logistics, and inventory management. Developed custom CMS for merchants to manage storefronts and products. Built and maintained open-source UI library for apps.",
     "logo": "distro.svg",
     "logoDark": "distro-light.svg"
   },
@@ -37,14 +37,14 @@
     "startDate": "Jun 2023",
     "endDate": "Sep 2023",
     "role": "Frontend Developer",
-    "description": "Contributed to enterprise web development projects for LBM's clients. Focused on building custom applications and dynamic web solutions with emphasis on user experience.",
+    "description": "Built Chrome extension to enhance customer interaction with project issues. Initiated redesign of company website and redesigned Playa Hotels and Resorts website.",
     "logo": "lbm.svg"
   },
   {
     "company": "Specta",
     "startDate": "May 2022",
     "endDate": "Feb 2023",
-    "role": "Full-stack Developer",
+    "role": "Frontend Developer",
     "description": "Developed team collaboration platform with task tracking, messaging, and calendar scheduling. Built cross-platform desktop application with real-time data synchronization.",
     "logo": "specta.svg"
   },
@@ -53,7 +53,7 @@
     "startDate": "Dec 2020",
     "endDate": "Aug 2022",
     "role": "Frontend Developer",
-    "description": "Built three SaaS applications helping small businesses manage client communications and online visibility. Implemented analytics tracking to provide data-driven insights for product strategy.",
+    "description": "Created geospatial, geosocial, and geocivic software solutions to connect and empower communities. Built products from scratch with user-friendly UI designs and contributed to in-house component library. Implemented event monitoring schema for data-driven feature prioritisation.",
     "logo": "walulel.png"
   }
 ]
