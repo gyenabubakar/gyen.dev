@@ -7,7 +7,7 @@ import technologies from '~/data/technologies.json';
   <div class="flex flex-wrap gap-3">
     {
       technologies.map((tech) => (
-        <span class="flex items-center gap-2 border border-black px-3 py-2 text-sm hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black">
+        <span class="flex items-center gap-2 border border-black px-3 py-2 text-sm dark:border-white">
           {tech.icon !== 'expressjs' ? (
             <img
               src={`/stack/${tech.icon}.svg`}

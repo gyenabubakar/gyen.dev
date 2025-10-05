@@ -11,7 +11,7 @@ import distroLight from '~/assets/companies/distro-light.svg';
 import lbm from '~/assets/companies/lbm.svg';
 import specta from '~/assets/companies/specta.svg';
 
-const imageMap = {
+const imageMap: Record<string, ImageMetadata> = {
   'walulel.png': walulel,
   'sourcertz.png': sourcertz,
   'plugdrive.png': plugdrive,
@@ -116,16 +116,16 @@ const imageMap = {
             </div>
 
             <button
-              class="toggle-btn flex size-8 items-center justify-center rounded-full border border-black hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
+              class="toggle-btn flex size-8 items-center justify-center rounded-full border border-black transition-colors duration-500 hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
               data-index={index}
               aria-label="Toggle description"
               aria-expanded="false"
             >
-              <ChevronDownIcon size={16} class="chevron" />
+              <ChevronDownIcon size={16} class="chevron transition-transform duration-300" />
             </button>
           </div>
 
-          <div class="description-wrapper max-h-0 overflow-hidden">
+          <div class="description-wrapper max-h-0 overflow-hidden transition-all duration-300">
             <p class="pt-2 text-sm leading-relaxed text-neutral-600 sm:ml-[52px] dark:text-neutral-400">
               {job.description}
             </p>
@@ -139,28 +139,6 @@ const imageMap = {
 <script>
   document.querySelectorAll('.toggle-btn').forEach((btn) => {
     const toggleBtn = btn as HTMLElement;
-    let mouseX = 0;
-    let mouseY = 0;
-    let buttonX = 0;
-    let buttonY = 0;
-
-    toggleBtn.addEventListener('mouseenter', () => {
-      const rect = toggleBtn.getBoundingClientRect();
-      buttonX = rect.left + rect.width / 2;
-      buttonY = rect.top + rect.height / 2;
-    });
-
-    toggleBtn.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      const deltaX = (mouseX - buttonX) * 0.15;
-      const deltaY = (mouseY - buttonY) * 0.15;
-      toggleBtn.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
-    });
-
-    toggleBtn.addEventListener('mouseleave', () => {
-      toggleBtn.style.transform = '';
-    });
 
     toggleBtn.addEventListener('click', () => {
       const article = toggleBtn.closest('.experience-item');

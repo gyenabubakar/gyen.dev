@@ -9,7 +9,3 @@ body {
 button {
   @apply cursor-pointer;
 }
-
-*:not(svg, svg *) {
-  @apply duration-300;
-}
