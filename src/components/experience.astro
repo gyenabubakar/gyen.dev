@@ -5,10 +5,11 @@ import { ChevronDownIcon } from '@lucide/astro';
 
 <section class="mb-16">
   <h2 class="mb-8 text-2xl font-bold">Experience</h2>
+
   <div class="space-y-8">
     {
       experience.map((job, index) => (
-        <article class="experience-item">
+        <article class="experience-item transform">
           <div class="flex items-start justify-between gap-4">
             <div class="flex flex-1 items-start gap-3">
               <div class="hidden sm:block [&>img]:size-12 [&>img]:object-contain">
@@ -25,6 +26,7 @@ import { ChevronDownIcon } from '@lucide/astro';
                   <img src={`/companies/${job.logo}`} alt={job.company} class="" />
                 )}
               </div>
+
               <div class="flex-1">
                 <div class="mb-2 sm:hidden [&>img]:size-12 [&>img]:object-contain">
                   {job.logoDark ? (
@@ -40,22 +42,26 @@ import { ChevronDownIcon } from '@lucide/astro';
                     <img src={`/companies/${job.logo}`} alt={job.company} class="" />
                   )}
                 </div>
+
                 <h3 class="text-xl font-medium">{job.company}</h3>
+
                 <p class="text-[15px]">
                   {job.role} · {job.startDate} - {job.endDate ?? 'Present'}
                 </p>
               </div>
             </div>
+
             <button
-              class="toggle-btn flex h-8 w-8 items-center justify-center rounded-full border border-black transition-colors hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
+              class="toggle-btn flex size-8 items-center justify-center rounded-full border border-black hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
               data-index={index}
               aria-label="Toggle description"
             >
-              <ChevronDownIcon size={16} class="chevron transition-transform" />
+              <ChevronDownIcon size={16} class="chevron" />
             </button>
           </div>
-          <div class="description-wrapper max-h-0 overflow-hidden transition-all duration-300">
-            <p class="pt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:ml-[52px]">
+
+          <div class="description-wrapper max-h-0 overflow-hidden">
+            <p class="pt-2 text-sm leading-relaxed text-neutral-600 sm:ml-[52px] dark:text-neutral-400">
               {job.description}
             </p>
           </div>
@@ -67,10 +73,34 @@ import { ChevronDownIcon } from '@lucide/astro';
 
 <script>
   document.querySelectorAll('.toggle-btn').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const article = btn.closest('.experience-item');
+    const toggleBtn = btn as HTMLElement;
+    let mouseX = 0;
+    let mouseY = 0;
+    let buttonX = 0;
+    let buttonY = 0;
+
+    toggleBtn.addEventListener('mouseenter', () => {
+      const rect = toggleBtn.getBoundingClientRect();
+      buttonX = rect.left + rect.width / 2;
+      buttonY = rect.top + rect.height / 2;
+    });
+
+    toggleBtn.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      const deltaX = (mouseX - buttonX) * 0.15;
+      const deltaY = (mouseY - buttonY) * 0.15;
+      toggleBtn.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+    });
+
+    toggleBtn.addEventListener('mouseleave', () => {
+      toggleBtn.style.transform = '';
+    });
+
+    toggleBtn.addEventListener('click', () => {
+      const article = toggleBtn.closest('.experience-item');
       const wrapper = article?.querySelector('.description-wrapper') as HTMLElement;
-      const chevron = btn.querySelector('.chevron') as HTMLElement;
+      const chevron = toggleBtn.querySelector('.chevron') as HTMLElement;
 
       if (wrapper && chevron) {
         const isOpen = wrapper.style.maxHeight && wrapper.style.maxHeight !== '0px';

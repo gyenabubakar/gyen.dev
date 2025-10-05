@@ -1,53 +1,39 @@
 ---
-import { Mail, Linkedin, Github, MapPin, Rss } from '@lucide/astro';
+import { MailIcon, LinkedinIcon, GithubIcon, MapPinIcon, RssIcon } from '@lucide/astro';
 ---
 
 <header id="page-header" class="mb-16">
-  <img src="/gyen.jpeg" alt="Gyen Abubakar Sadick" class="mb-6 h-24 w-24 rounded-full grayscale" />
+  <img src="/gyen.jpeg" alt="Gyen Abubakar Sadick" class="mb-6 size-24 rounded-full grayscale" />
+
   <h1 class="mb-2 text-4xl font-bold">Gyen Abubakar Sadick</h1>
   <p class="mb-1 text-xl">Software Developer</p>
 
-  <div class="flex flex-wrap gap-4 text-sm">
-    <a
-      href="mailto:gyenabubakar@gmail.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="flex items-center gap-1.5 hover:underline dark:hover:text-neutral-300"
-    >
-      <Mail size={16} />
+  <div
+    class="flex flex-wrap gap-4 text-sm [&>a]:flex [&>a]:items-center [&>a]:gap-1.5 [&>a]:hover:underline [&>a]:dark:hover:text-neutral-300"
+  >
+    <a href="mailto:gyenabubakar@gmail.com" target="_blank" rel="noopener noreferrer">
+      <MailIcon size={16} />
       gyenabubakar@gmail.com
     </a>
-    <a
-      href="https://linkedin.com/in/GyenAbubakar"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="flex items-center gap-1.5 hover:underline dark:hover:text-neutral-300"
-    >
-      <Linkedin size={16} />
+
+    <a href="https://linkedin.com/in/GyenAbubakar" target="_blank" rel="noopener noreferrer">
+      <LinkedinIcon size={16} />
       LinkedIn
     </a>
-    <a
-      href="https://github.com/gyenabubakar"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="flex items-center gap-1.5 hover:underline dark:hover:text-neutral-300"
-    >
-      <Github size={16} />
+
+    <a href="https://github.com/gyenabubakar" target="_blank" rel="noopener noreferrer">
+      <GithubIcon size={16} />
       GitHub
     </a>
-    <a
-      href="https://blog.gyen.dev"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="flex items-center gap-1.5 hover:underline dark:hover:text-neutral-300"
-    >
-      <Rss size={16} />
+
+    <a href="https://blog.gyen.dev" target="_blank" rel="noopener noreferrer">
+      <RssIcon size={16} />
       Blog
     </a>
   </div>
 
   <p class="mt-4 flex items-center gap-1 text-sm text-neutral-500 dark:text-neutral-500">
-    <MapPin size={14} />
+    <MapPinIcon size={14} />
     Accra, Ghana — West Africa (UTC)
   </p>
 </header>
@@ -61,34 +47,33 @@ import { Mail, Linkedin, Github, MapPin, Rss } from '@lucide/astro';
     class="flex items-center justify-between gap-8 rounded-full border border-black bg-white/80 px-6 py-3 shadow-lg backdrop-blur-md dark:border-white dark:bg-black/80"
   >
     <div class="flex items-center gap-3">
-      <img src="/gyen.jpeg" alt="Gyen Abubakar Sadick" class="h-10 w-10 rounded-full grayscale" />
+      <img src="/gyen.jpeg" alt="Gyen Abubakar Sadick" class="size-10 rounded-full grayscale" />
       <span class="hidden font-bold sm:block">Gyen Abubakar</span>
     </div>
-    <div class="flex items-center gap-2">
-      <a
-        href="mailto:gyenabubakar@gmail.com"
-        class="flex h-8 w-8 items-center justify-center rounded-full border border-black transition-colors hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
-        aria-label="Email"
-      >
-        <Mail size={16} />
+
+    <div
+      class="flex items-center gap-2 [&>a]:flex [&>a]:size-8 [&>a]:items-center [&>a]:justify-center [&>a]:rounded-full [&>a]:border [&>a]:border-black [&>a]:hover:bg-black [&>a]:hover:text-white [&>a]:dark:border-white [&>a]:dark:hover:bg-white [&>a]:dark:hover:text-black"
+    >
+      <a href="mailto:gyenabubakar@gmail.com" aria-label="Email">
+        <MailIcon size={16} />
       </a>
+
       <a
         href="https://linkedin.com/in/GyenAbubakar"
         target="_blank"
         rel="noopener noreferrer"
-        class="flex h-8 w-8 items-center justify-center rounded-full border border-black transition-colors hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
         aria-label="LinkedIn"
       >
-        <Linkedin size={16} />
+        <LinkedinIcon size={16} />
       </a>
+
       <a
         href="https://github.com/gyenabubakar"
         target="_blank"
         rel="noopener noreferrer"
-        class="flex h-8 w-8 items-center justify-center rounded-full border border-black transition-colors hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
         aria-label="GitHub"
       >
-        <Github size={16} />
+        <GithubIcon size={16} />
       </a>
     </div>
   </div>

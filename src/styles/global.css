@@ -9,3 +9,7 @@ body {
 button {
   @apply cursor-pointer;
 }
+
+* {
+  @apply duration-300;
+}

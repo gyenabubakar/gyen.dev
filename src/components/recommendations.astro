@@ -4,15 +4,18 @@ import recommendations from '~/data/recommendations.json';
 
 <section class="mb-16">
   <h2 class="mb-8 text-2xl font-bold">What people say</h2>
+
   <div class="space-y-6">
     {
       recommendations.map((rec) => (
-        <article class="border border-black dark:border-white p-6">
-          <div class="flex items-start gap-4 mb-4">
+        <article class="border border-black p-6 hover:shadow-lg dark:border-white">
+          <div class="mb-4 flex items-start gap-4">
             <img src={rec.image} alt={rec.name} class="size-12 rounded-full object-cover" />
+
             <div class="flex-1">
               <h3 class="text-xl font-medium">{rec.name}</h3>
-              <div class="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-500">
+
+              <div class="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-500 [&>img]:size-5 [&>img]:object-contain">
                 {rec.companyLogo && (
                   <>
                     {rec.companyLogoDark ? (
@@ -20,20 +23,16 @@ import recommendations from '~/data/recommendations.json';
                         <img
                           src={`/companies/${rec.companyLogo}`}
                           alt={rec.company}
-                          class="h-4 w-4 object-contain dark:hidden"
+                          class="dark:hidden"
                         />
                         <img
                           src={`/companies/${rec.companyLogoDark}`}
                           alt={rec.company}
-                          class="hidden h-4 w-4 object-contain dark:block"
+                          class="hidden dark:block"
                         />
                       </>
                     ) : (
-                      <img
-                        src={`/companies/${rec.companyLogo}`}
-                        alt={rec.company}
-                        class="h-4 w-4 object-contain"
-                      />
+                      <img src={`/companies/${rec.companyLogo}`} alt={rec.company} />
                     )}
                   </>
                 )}
@@ -41,7 +40,8 @@ import recommendations from '~/data/recommendations.json';
               </div>
             </div>
           </div>
-          <p class="text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 whitespace-pre-line">
+
+          <p class="text-sm leading-relaxed whitespace-pre-line text-neutral-600 dark:text-neutral-400">
             {rec.text}
           </p>
         </article>
