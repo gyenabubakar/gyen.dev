@@ -1,5 +1,29 @@
 ---
 import Layout from '~/layouts/layout.astro';
+import { PageHeader, Technologies, Experience, Recommendations, Footer } from '~/components';
 ---
 
-<Layout> Hello World! </Layout>
+<Layout>
+  <main class="flex min-h-screen items-center justify-center px-6 py-12">
+    <div class="w-full max-w-2xl">
+      <PageHeader />
+
+      <section class="mb-16">
+        <p class="text-lg leading-relaxed">
+          I've helped startups solve problems through software—automating e-commerce workflows,
+          building real-time collaboration tools, and creating component libraries that speed up
+          development. I contribute across the stack, from frontend to backend, databases, and
+          automated deployment.
+        </p>
+      </section>
+
+      <Technologies />
+
+      <Experience />
+
+      <Recommendations />
+
+      <Footer />
+    </div>
+  </main>
+</Layout>

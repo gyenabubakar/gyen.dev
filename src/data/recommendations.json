@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Reynold Adade",
+    "company": "Walulel Limited",
+    "companyLogo": "walulel.png",
+    "text": "Gyen is one of the smartest engineers I have ever worked with, his natural talent for problem solving, his ability to ask the right questions and proactiveness sets him apart from most engineers in the same skill bracket, if I had a product to build I would 100% choose to have him on my team",
+    "image": "https://media.licdn.com/dms/image/v2/C4D03AQFF8JFsNwknPg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1640295150351?e=1762387200&v=beta&t=ymPd9fUSEIOf4hNRnBjmnHSVE1SLedJPkYHDEw_eiCw"
+  },
+  {
+    "name": "Gary Williams",
+    "title": "Cofounder / Head of Product",
+    "company": "Logic Bomb Media",
+    "companyLogo": "lbm.svg",
+    "text": "Gyen was a fantastic resource for our team, allowing us to complete several projects quickly, efficiently, and to the satisfaction of our customers. His communication throughout each project was exceptional, and you couldn't ask for a more positive team member. Gyen clearly loves web technology and consistently demonstrates a strong eagerness to learn and expand his skill set.\n\nDespite being located outside the US, Gyen went above and beyond to accommodate our time zone differences, ensuring timely collaboration and delivery. He consistently demonstrated flexibility and commitment, making complex schedules feel seamless. I highly recommend Gyen for any team looking for a dedicated, skilled, and enthusiastic professional.",
+    "image": "https://media.licdn.com/dms/image/v2/D4E03AQF0P6o7YfyFIg/profile-displayphoto-scale_100_100/B4EZkbPOOEIoAc-/0/1757098604634?e=1762387200&v=beta&t=b_db7hNeI-eOP-TUVpQEtvLxgpkyc2dXpGY3AYBN_Ms"
+  },
+  {
+    "name": "Abdelhalim Riache",
+    "company": "Specta",
+    "companyLogo": "specta.svg",
+    "text": "I had the pleasure of working with Gyen Abubakar on a project where we developed an app called 'Specta' - a workflow management software that was ceased in February 2023 due to financial issues. Gyen was an incredible collaborator throughout the entire process - from ideation to deployment. He demonstrated strong attention to detail and technical proficiency in utilizing top-of-the-line technologies such as Sveltekit, TailwindCSS, and Firebase.\n\nI definitely recommend Gyen Abubakar to anybody looking for a tech partner that is not just knowledgeable and talented but also communicative and trustworthy.",
+    "image": "https://media.licdn.com/dms/image/v2/D4E35AQHHz32yWfMxcA/profile-framedphoto-shrink_100_100/B4EZY6pR2rHYAk-/0/1744740622038?e=1760277600&v=beta&t=fnvr-9kbiFGGuPA1iHHdTlyvlnBnOz-gSPitwttElRY"
+  },
+  {
+    "name": "Jarek Ostrowski",
+    "title": "CEO & Founder",
+    "company": "Distro MFG",
+    "companyLogo": "distro.svg",
+    "companyLogoDark": "distro-light.svg",
+    "text": "I can trust Gyen with anything, he's a great communicator and highly skilled developer. There isn't a problem he can't solve.",
+    "image": "https://media.licdn.com/dms/image/v2/D4E03AQEkbJCl3drHBQ/profile-displayphoto-scale_100_100/B4EZgO8k2lGoAc-/0/1752597420478?e=1762387200&v=beta&t=R3Qfe2_rD6nhLp0EtbCwgot1XxCrW8KlwZO6zpb-0tk"
+  },
+  {
+    "name": "Benedict Debrah",
+    "company": "High School",
+    "text": "I had the pleasure of meeting Gyen in senior high school around 2018, where he was a senior to me. He introduced me to the world of technology and programming, and I still remember the day he taught me the basics of web development. His patience and expertise were evident even back then, and he provided me with valuable tutorials to kickstart my journey. I'm thrilled to see him excelling in his career, and I wholeheartedly recommend his skills in software development. He is a talented professional, and I'm grateful for the impact he's had on my own journey in tech.",
+    "image": "https://media.licdn.com/dms/image/v2/D4D03AQGO5HWrG923xw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1714267485835?e=1762387200&v=beta&t=2Bgm-VCFzw9Sm157rBbgQqd_Nb76eU1EL8fCFxhKKbo"
+  }
+]

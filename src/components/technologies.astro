@@ -1,0 +1,17 @@
+---
+import technologies from '~/data/technologies.json';
+---
+
+<section class="mb-16">
+  <h2 class="mb-6 text-2xl font-bold">Technologies</h2>
+  <div class="flex flex-wrap gap-3">
+    {
+      technologies.map((tech) => (
+        <span class="flex items-center gap-2 border border-black px-3 py-2 text-sm dark:border-white">
+          <img src={`/stack/${tech.icon}.svg`} alt={tech.name} class="h-4 w-4" />
+          {tech.name}
+        </span>
+      ))
+    }
+  </div>
+</section>

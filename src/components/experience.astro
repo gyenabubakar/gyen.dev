@@ -1,0 +1,88 @@
+---
+import experience from '~/data/experience.json';
+import { ChevronDownIcon } from '@lucide/astro';
+---
+
+<section class="mb-16">
+  <h2 class="mb-8 text-2xl font-bold">Experience</h2>
+  <div class="space-y-8">
+    {
+      experience.map((job, index) => (
+        <article class="experience-item">
+          <div class="flex items-start justify-between gap-4">
+            <div class="flex flex-1 items-start gap-3">
+              <div class="hidden sm:block [&>img]:size-12 [&>img]:object-contain">
+                {job.logoDark ? (
+                  <>
+                    <img src={`/companies/${job.logo}`} alt={job.company} class="dark:hidden" />
+                    <img
+                      src={`/companies/${job.logoDark}`}
+                      alt={job.company}
+                      class="hidden dark:block"
+                    />
+                  </>
+                ) : (
+                  <img src={`/companies/${job.logo}`} alt={job.company} class="" />
+                )}
+              </div>
+              <div class="flex-1">
+                <div class="mb-2 sm:hidden [&>img]:size-12 [&>img]:object-contain">
+                  {job.logoDark ? (
+                    <>
+                      <img src={`/companies/${job.logo}`} alt={job.company} class="dark:hidden" />
+                      <img
+                        src={`/companies/${job.logoDark}`}
+                        alt={job.company}
+                        class="hidden dark:block"
+                      />
+                    </>
+                  ) : (
+                    <img src={`/companies/${job.logo}`} alt={job.company} class="" />
+                  )}
+                </div>
+                <h3 class="text-xl font-medium">{job.company}</h3>
+                <p class="text-[15px]">
+                  {job.role} · {job.startDate} - {job.endDate ?? 'Present'}
+                </p>
+              </div>
+            </div>
+            <button
+              class="toggle-btn flex h-8 w-8 items-center justify-center rounded-full border border-black transition-colors hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
+              data-index={index}
+              aria-label="Toggle description"
+            >
+              <ChevronDownIcon size={16} class="chevron transition-transform" />
+            </button>
+          </div>
+          <div class="description-wrapper max-h-0 overflow-hidden transition-all duration-300">
+            <p class="pt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:ml-[52px]">
+              {job.description}
+            </p>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.toggle-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const article = btn.closest('.experience-item');
+      const wrapper = article?.querySelector('.description-wrapper') as HTMLElement;
+      const chevron = btn.querySelector('.chevron') as HTMLElement;
+
+      if (wrapper && chevron) {
+        const isOpen = wrapper.style.maxHeight && wrapper.style.maxHeight !== '0px';
+
+        if (isOpen) {
+          wrapper.style.maxHeight = '0';
+          chevron.style.transform = 'rotate(0deg)';
+        } else {
+          wrapper.style.maxHeight = wrapper.scrollHeight + 'px';
+          chevron.style.transform = 'rotate(180deg)';
+        }
+      }
+    });
+  });
+</script>
