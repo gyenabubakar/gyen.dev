@@ -1,9 +1,17 @@
 ---
 import { MailIcon, LinkedinIcon, GithubIcon, MapPinIcon, RssIcon } from '@lucide/astro';
+import { Image } from 'astro:assets';
+import gyenImage from '~/assets/gyen.jpeg';
 ---
 
 <header id="page-header" class="mb-16">
-  <img src="/gyen.jpeg" alt="Gyen Abubakar Sadick" class="mb-6 size-24 rounded-full grayscale" />
+  <Image
+    src={gyenImage}
+    alt="Gyen Abubakar Sadick"
+    class="mb-6 size-24 rounded-full object-cover grayscale"
+    width={96}
+    height={96}
+  />
 
   <h1 class="mb-2 text-4xl font-bold">Gyen Abubakar Sadick</h1>
   <p class="mb-1 text-xl">Software Developer</p>
@@ -32,7 +40,7 @@ import { MailIcon, LinkedinIcon, GithubIcon, MapPinIcon, RssIcon } from '@lucide
     </a>
   </div>
 
-  <p class="mt-4 flex items-center gap-1 text-sm text-neutral-500 dark:text-neutral-500">
+  <p class="mt-4 flex items-center gap-1 text-sm text-neutral-500 dark:text-neutral-400">
     <MapPinIcon size={14} />
     Accra, Ghana — West Africa (UTC)
   </p>
@@ -42,20 +50,25 @@ import { MailIcon, LinkedinIcon, GithubIcon, MapPinIcon, RssIcon } from '@lucide
   id="sticky-nav"
   class="pointer-events-none fixed top-6 left-1/2 z-50 w-full max-w-[calc(100%-3rem)] opacity-0"
   style="transform: translate(-50%, 0) scale(1.05); max-width: min(42rem, calc(100% - 3rem));"
-  aria-hidden="true"
 >
   <div
     class="flex items-center justify-between gap-8 rounded-full border border-black bg-white/80 px-6 py-3 shadow-lg backdrop-blur-md dark:border-white dark:bg-black/80"
   >
     <div class="flex items-center gap-3">
-      <img src="/gyen.jpeg" alt="Gyen Abubakar Sadick" class="size-10 rounded-full grayscale" />
+      <Image
+        src={gyenImage}
+        alt="Gyen Abubakar Sadick"
+        class="size-10 rounded-full object-cover grayscale"
+        width={40}
+        height={40}
+      />
       <span class="hidden font-bold sm:block">Gyen Abubakar</span>
     </div>
 
     <div
       class="flex items-center gap-2 [&>a]:flex [&>a]:size-8 [&>a]:items-center [&>a]:justify-center [&>a]:rounded-full [&>a]:border [&>a]:border-black [&>a]:hover:bg-black [&>a]:hover:text-white [&>a]:dark:border-white [&>a]:dark:hover:bg-white [&>a]:dark:hover:text-black"
     >
-      <a href="mailto:gyenabubakar@gmail.com" aria-label="Email">
+      <a href="mailto:gyenabubakar@gmail.com" aria-label="Email" tabindex="-1">
         <MailIcon size={16} />
       </a>
 
@@ -64,6 +77,7 @@ import { MailIcon, LinkedinIcon, GithubIcon, MapPinIcon, RssIcon } from '@lucide
         target="_blank"
         rel="noopener noreferrer"
         aria-label="LinkedIn"
+        tabindex="-1"
       >
         <LinkedinIcon size={16} />
       </a>
@@ -73,6 +87,7 @@ import { MailIcon, LinkedinIcon, GithubIcon, MapPinIcon, RssIcon } from '@lucide
         target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub"
+        tabindex="-1"
       >
         <GithubIcon size={16} />
       </a>
@@ -92,17 +107,18 @@ import { MailIcon, LinkedinIcon, GithubIcon, MapPinIcon, RssIcon } from '@lucide
   function updateNav() {
     const headerRect = header.getBoundingClientRect();
     const isHeaderVisible = headerRect.bottom > 100;
+    const navLinks = nav.querySelectorAll('a');
 
     if (!isHeaderVisible) {
       nav.style.opacity = '1';
       nav.style.pointerEvents = 'auto';
       nav.style.transform = 'translate(-50%, 0) scale(1)';
-      nav.setAttribute('aria-hidden', 'false');
+      navLinks.forEach((link) => link.removeAttribute('tabindex'));
     } else {
       nav.style.opacity = '0';
       nav.style.pointerEvents = 'none';
       nav.style.transform = 'translate(-50%, 0) scale(1.05)';
-      nav.setAttribute('aria-hidden', 'true');
+      navLinks.forEach((link) => link.setAttribute('tabindex', '-1'));
     }
 
     ticking = false;

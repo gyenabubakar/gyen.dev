@@ -1,5 +1,19 @@
 ---
 import recommendations from '~/data/recommendations.json';
+import { Image } from 'astro:assets';
+import walulel from '~/assets/companies/walulel.png';
+import distro from '~/assets/companies/distro.svg';
+import distroLight from '~/assets/companies/distro-light.svg';
+import lbm from '~/assets/companies/lbm.svg';
+import specta from '~/assets/companies/specta.svg';
+
+const imageMap = {
+  'walulel.png': walulel,
+  'distro.svg': distro,
+  'distro-light.svg': distroLight,
+  'lbm.svg': lbm,
+  'specta.svg': specta,
+};
 ---
 
 <section class="mb-16">
@@ -15,29 +29,43 @@ import recommendations from '~/data/recommendations.json';
             <div class="flex-1">
               <h3 class="text-xl font-medium">{rec.name}</h3>
 
-              <div class="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-500 [&>img]:size-5 [&>img]:object-contain">
+              <div class="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 [&>img]:size-5 [&>img]:object-contain">
                 {rec.companyLogo && (
                   <>
-                    {rec.companyLogoDark ? (
+                    {rec.companyLogoDark && imageMap[rec.companyLogoDark] ? (
                       <>
-                        <img
-                          src={`/companies/${rec.companyLogo}`}
+                        <Image
+                          src={imageMap[rec.companyLogo]}
                           alt={rec.company}
                           aria-hidden="true"
                           class="dark:hidden"
+                          width={20}
+                          height={20}
                         />
-                        <img
-                          src={`/companies/${rec.companyLogoDark}`}
+                        <Image
+                          src={imageMap[rec.companyLogoDark]}
                           alt={rec.company}
                           aria-hidden="true"
                           class="hidden dark:block"
+                          width={20}
+                          height={20}
                         />
                       </>
+                    ) : imageMap[rec.companyLogo] ? (
+                      <Image
+                        src={imageMap[rec.companyLogo]}
+                        alt={rec.company}
+                        aria-hidden="true"
+                        width={20}
+                        height={20}
+                      />
                     ) : (
                       <img
                         src={`/companies/${rec.companyLogo}`}
                         alt={rec.company}
                         aria-hidden="true"
+                        width="20"
+                        height="20"
                       />
                     )}
                   </>
