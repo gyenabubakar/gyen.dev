@@ -23,16 +23,22 @@ import recommendations from '~/data/recommendations.json';
                         <img
                           src={`/companies/${rec.companyLogo}`}
                           alt={rec.company}
+                          aria-hidden="true"
                           class="dark:hidden"
                         />
                         <img
                           src={`/companies/${rec.companyLogoDark}`}
                           alt={rec.company}
+                          aria-hidden="true"
                           class="hidden dark:block"
                         />
                       </>
                     ) : (
-                      <img src={`/companies/${rec.companyLogo}`} alt={rec.company} />
+                      <img
+                        src={`/companies/${rec.companyLogo}`}
+                        alt={rec.company}
+                        aria-hidden="true"
+                      />
                     )}
                   </>
                 )}

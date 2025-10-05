@@ -28,6 +28,7 @@ const currentYear = new Date().getFullYear();
     const isDark = document.documentElement.classList.contains('dark');
     sunIcon.classList.toggle('hidden', isDark);
     moonIcon.classList.toggle('hidden', !isDark);
+    toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
   }
 
   updateIcons();

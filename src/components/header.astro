@@ -42,6 +42,7 @@ import { MailIcon, LinkedinIcon, GithubIcon, MapPinIcon, RssIcon } from '@lucide
   id="sticky-nav"
   class="pointer-events-none fixed top-6 left-1/2 z-50 w-full max-w-[calc(100%-3rem)] opacity-0"
   style="transform: translate(-50%, 0) scale(1.05); max-width: min(42rem, calc(100% - 3rem));"
+  aria-hidden="true"
 >
   <div
     class="flex items-center justify-between gap-8 rounded-full border border-black bg-white/80 px-6 py-3 shadow-lg backdrop-blur-md dark:border-white dark:bg-black/80"
@@ -96,10 +97,12 @@ import { MailIcon, LinkedinIcon, GithubIcon, MapPinIcon, RssIcon } from '@lucide
       nav.style.opacity = '1';
       nav.style.pointerEvents = 'auto';
       nav.style.transform = 'translate(-50%, 0) scale(1)';
+      nav.setAttribute('aria-hidden', 'false');
     } else {
       nav.style.opacity = '0';
       nav.style.pointerEvents = 'none';
       nav.style.transform = 'translate(-50%, 0) scale(1.05)';
+      nav.setAttribute('aria-hidden', 'true');
     }
 
     ticking = false;

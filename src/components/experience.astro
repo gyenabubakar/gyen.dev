@@ -55,6 +55,7 @@ import { ChevronDownIcon } from '@lucide/astro';
               class="toggle-btn flex size-8 items-center justify-center rounded-full border border-black hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
               data-index={index}
               aria-label="Toggle description"
+              aria-expanded="false"
             >
               <ChevronDownIcon size={16} class="chevron" />
             </button>
@@ -108,9 +109,11 @@ import { ChevronDownIcon } from '@lucide/astro';
         if (isOpen) {
           wrapper.style.maxHeight = '0';
           chevron.style.transform = 'rotate(0deg)';
+          toggleBtn.setAttribute('aria-expanded', 'false');
         } else {
           wrapper.style.maxHeight = wrapper.scrollHeight + 'px';
           chevron.style.transform = 'rotate(180deg)';
+          toggleBtn.setAttribute('aria-expanded', 'true');
         }
       }
     });
